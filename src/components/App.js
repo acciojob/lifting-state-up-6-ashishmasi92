@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import './../styles/App.css';
-import Child from "./child";
+import Child from "./Child.js";
 const App = () => {
 
   let [todos, setTodos] = useState([
