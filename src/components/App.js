@@ -14,7 +14,7 @@ const App = () => {
 
     setTodos((prev)=>{
       return prev.map((todo)=>{
-        return todo.id==id ? {...todo,completed:true}:todo
+        return todo.id===id ? {...todo,completed:true}:todo
       })
     })
 
