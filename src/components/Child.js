@@ -8,9 +8,12 @@ const Child = ({list,func})=>{
         <h2>Child component</h2>
         <ul>
             {list.map((v)=>{
-                return <li key={v.id}  >{v.task} {v.completed===false&& <button onClick={()=>{
-                    func(v.id)
-                }} >Complete</button>} </li>
+                return <li key={v.id}  >{v.task}
+                {v.completed?<span>- completed</span>
+                : (
+              <button onClick={() => func(v.id)}>Complete</button>
+            )}
+             </li>
             })}
         </ul>
         </>
