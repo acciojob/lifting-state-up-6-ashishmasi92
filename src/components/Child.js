@@ -10,7 +10,7 @@ const Child = ({list,func})=>{
             {list.map((v)=>{
                 return <li key={v.id}  >{v.task} {v.completed==false&& <button onClick={()=>{
                     func(v.id)
-                }} >completed</button>} </li>
+                }} >Complete</button>} </li>
             })}
         </ul>
         </>
