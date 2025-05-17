@@ -9,10 +9,9 @@ const Child = ({list,func})=>{
         <ul>
             {list.map((v)=>{
                 return <li key={v.id}  >{v.task}
-                {v.completed?<span>- completed</span>
-                : (
-              <button onClick={() => func(v.id)}>Complete</button>
-            )}
+                {!v.completed && (
+                    <button onClick={()=>{func(v.id)}} >Complete</button>
+                )}
              </li>
             })}
         </ul>
